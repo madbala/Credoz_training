@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
     .container{
-      border-color: red;
-      border:1px solid;
-      width: auto;
-      height: auto;
-      margin: 10%;
-      padding: 2%;
-      text-align: center;
+        margin: 0% auto;
+        padding: 5%;
+        width: 0% auto;
     }
+    .jumbotron
+    {
+        margin: 0% auto;
+        padding: 4%;
+        width: 0% auto;
+    }
+   
+    
     </style>
-
 </head>
-
 <body>
-    <div class="container">
-      <h2 style="color:red">CALCULATOR PROJECT</h2>
-      <p>(By <strong>Balaguru</strong>) </p><br>
-  <!--<form name="form1" id="form">-->
-    <b>Number 1:</b>&nbsp;&nbsp;<input type="text" id="ip1" required><br><br><br>
-    <b>Number 2:</b>&nbsp; &nbsp;<input type="text" id="ip2" required><br><br><br>
-    <b>Result :</b>&nbsp; &nbsp;<input id="res"><br><br><br>
+    <div class="container" >
+        <div class="jumbotron" >
+              <h2 style="color:red; text-align: center;">CALCULATOR</h2>
+                 <table class="table table-bordered table-hover" >
+                  <thead><tr><input type="text" class="form-control" id="ip1" ></tr></thead>
+                  <tbody>
+                        <tr>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >1</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >2</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >3</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >+</button></td>
+                        </tr>
+                        <tr>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >4</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >5</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >6</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >-</button></td>
+                        </tr>
+                        <tr>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >7</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >8</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >9</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >*</button></td>
+                        </tr>
+                        <tr>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >0</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doclear()" >C</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doCalculate()" >=</button></td>
+                          <td><button type="button" class="btn btn-primary" onclick="doview(this.innerHTML)" >/</button></td>
+                        </tr>
+                      </tbody>
+                  
 
-onclick="submitcustom(add)"
-    <button value="Add" class="animal" data-type="add"><b>ADD</b></button>&nbsp;
-    <button value="Sub" class="animal" data-type="sub"><b>SUB</b></button>&nbsp;
-    <button value="Mul" class="animal" data-type="mul"><b>MUL</b></button>&nbsp;
-    <button  value="Div" class="animal" data-type="div"><b>DIV</b></button>&nbsp;
-    <button  value="Clear" onclick="reset()"><b>RESET</b></button>&nbsp;
-    <br><br><br>
-    <h4><b>Result:</b><span id="result"></span></h4>
-   <!--</form>-->
-   </div>
+                 </table>
+        </div>
+    </div>
+
+    
 </body>
-     <script src="index.js"></script>
-     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
-<script>
-$('.animal').click(function(){
-submitcustom($(this).data('type'));
-});
-
-</script>
+<script src="index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
