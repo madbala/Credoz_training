@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+    .container{
+      border-color: red;
+      border:1px solid;
+      width: auto;
+      height: auto;
+      margin: 10%;
+      padding: 2%;
+      text-align: center;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+      <h2 style="color:red">CALCULATOR PROJECT</h2>
+      <p>(By <strong>Balaguru</strong>) </p><br>
+  <!--<form name="form1" id="form">-->
+    <b>Number 1:</b>&nbsp;&nbsp;<input type="text" id="ip1" required><br><br><br>
+    <b>Number 2:</b>&nbsp; &nbsp;<input type="text" id="ip2" required><br><br><br>
+    <b>Result :</b>&nbsp; &nbsp;<input id="res"><br><br><br>
+
+onclick="submitcustom(add)"
+    <button value="Add" class="animal" data-type="add"><b>ADD</b></button>&nbsp;
+    <button value="Sub" class="animal" data-type="sub"><b>SUB</b></button>&nbsp;
+    <button value="Mul" class="animal" data-type="mul"><b>MUL</b></button>&nbsp;
+    <button  value="Div" class="animal" data-type="div"><b>DIV</b></button>&nbsp;
+    <button  value="Clear" onclick="reset()"><b>RESET</b></button>&nbsp;
+    <br><br><br>
+    <h4><b>Result:</b><span id="result"></span></h4>
+   <!--</form>-->
+   </div>
+</body>
+     <script src="index.js"></script>
+     <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script>
+$('.animal').click(function(){
+submitcustom($(this).data('type'));
+});
+
+</script>
+</html>
