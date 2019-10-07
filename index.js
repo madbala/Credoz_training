@@ -1,43 +1,25 @@
-function submitcustom(option)
-{
-var a = document.getElementById("ip1").value;
-var b = document.getElementById("ip2").value;
-var choice = option;
+var dotes,ans,x,tex="";
 
-if (isNaN(a) || isNaN(b)){
-    document.getElementById("result").innerHTML= "Please enter the VALID NUMBERS"; 
+function doview(temp)
+{debugger;
+  tex +=temp;  
+ document.getElementById("ip1").value=tex;   
 }
-else {
-    switch(choice){
-case "add":
-    {     
-    var c = Number(a) + Number(b);
-    break;
-    }
-case "sub":
-    {
-    var c = Number(a) - Number(b);
-    break;
-    }
-case "mul":
-    {
-    var c = Number(a) * Number(b);
-    break;
-    }
-case "div":
-    {
-    var c = Number(a) / Number(b);
-    break;
-    }}
-    document.getElementById("res").value= c;
-    document.getElementById("result").innerHTML= c;
-}}
 
-
-var reset = function()
+function doCalculate()
+{debugger;
+x=document.getElementById("ip1").value;
+try{
+ans = eval(x);
+return document.getElementById("ip1").value =ans;
+}
+catch(err)
 {
-document.getElementById("ip1").value= "";
-document.getElementById("ip2").value="";
-document.getElementById("res").value="";
-document.getElementById("result").innerHTML= "";
+return document.getElementById("ip1").value="INVALID CALCULATION";
+}
+}
+function doclear()
+{
+    document.getElementById("ip1").value="";
+    tex="";
 }
